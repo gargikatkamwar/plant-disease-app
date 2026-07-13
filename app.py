@@ -8,6 +8,19 @@ st.write("Step 2: TensorFlow imported")
 model = tf.keras.models.load_model("plant_disease_model.keras")
 st.write("Step 3: Model loaded successfully!")
 import json
+with open("class_indices.json") as f:
+    class_indices = json.load(f)
+st.write("Step 4: class_indices.json loaded")
+
+idx_to_class = {v: k for k, v in class_indices.items()}
+st.write("Step 5: Reverse mapping done")
+
+st.title("Plant Disease Detection")
+st.write("Step 6: Title rendered")
+
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg","jpeg","png"])
+st.write("Step 7: Uploader rendered")
+import json
 import numpy as np
 from PIL import Image
 import io
