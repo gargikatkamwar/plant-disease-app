@@ -1,5 +1,12 @@
 import streamlit as st
 st.write("Hello, this is a test")
+
+st.write("Step 1: Starting imports...")
+import tensorflow as tf
+st.write("Step 2: TensorFlow imported")
+
+model = tf.keras.models.load_model("plant_disease_model.keras")
+st.write("Step 3: Model loaded successfully!")
 import json
 import numpy as np
 from PIL import Image
