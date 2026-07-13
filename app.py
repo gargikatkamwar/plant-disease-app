@@ -31,7 +31,7 @@ import tensorflow as tf
 app = Flask(__name__)
 
 # Load the trained model
-model = tf.keras.models.load_model('plant_disease_model.h5')
+model = tf.keras.models.load_model('plant_disease_model.keras')
 
 # Load class indices
 with open('class_indices.json', 'r') as f:
