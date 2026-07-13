@@ -1,4 +1,5 @@
-
+import streamlit as st
+st.write("Hello, this is a test")
 import json
 import numpy as np
 from PIL import Image
